@@ -26,8 +26,8 @@ stresses piecewise in diffracting layers only.
 How to use it
 -------------
 
-The program was tested using GNU Octave, version 3.8.1. Here is a small example
-on how it could be launched:
+The program was tested using MATLAB, ver. 8.5.0.197613 (R2015a) and GNU Octave,
+ver. 3.8.1. Here is a small example on how it could be launched:
 ```
 $ octave
 >> cd 'thinstress/'
