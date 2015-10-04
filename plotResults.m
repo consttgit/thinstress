@@ -85,7 +85,7 @@ for i = 1:length(sample.layer)
              sample.layer(i).sigma_z(:, 2), ...
              'b-', 'linewidth', 2);
     end
-    D += sample.layer(i).thickness;
+    D = D + sample.layer(i).thickness;
 end
 
 % Show absorbing layers:
@@ -99,7 +99,7 @@ for i = 1:length(sample.layer)
                     D + sample.layer(i).thickness ylim(1)];
         fill(vertices(:, 1), vertices(:, 2), 'c');
     end
-    D += sample.layer(i).thickness;
+    D = D + sample.layer(i).thickness;
 end
 
 legend('Solution {\sigma}_{\alpha}(z)', ...
