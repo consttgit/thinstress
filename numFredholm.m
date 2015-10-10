@@ -43,19 +43,19 @@ for i = 1:size(sample.sigma_tau, 1)
     row = [];
     for j = 1:length(sample.layer)
         if sample.layer(j).diffracting
-            % Depth grid step:
+            % Step of the depth grid:
             h = sample.layer(j).h;
-            % Solution's domain (distance from surface):
-            Z = D : h : (D + sample.layer(j).thickness);
+            % Solution's domain in the current diffracting layer:
+            Z = 0 : h : sample.layer(j).thickness;
             for k = 1:length(Z)
                 z = Z(k);
                 tau = sample.sigma_tau(i, 1);
                 row(end+1) = exp(-(D + z) / tau);
             end
-            % Add real thickness of the layer:
+            % Add the real thickness of the layer:
             D = D + sample.layer(j).thickness;
         else
-            % Add equivalent thickness of the layer:
+            % Add the equivalent thickness of the layer:
             D = D + sample.layer(j).mue * sample.layer(j).thickness / mue_d;
         end
     end
