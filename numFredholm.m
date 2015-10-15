@@ -8,13 +8,13 @@ function [A] = numFredholm(sample, sol_length)
 %   numFredholm performs a numerical discretization of the Fredholm integral
 %   equation of the I-st kind using the rectangle method.
 %
-% Inputs:
+% Inputs
 %   (structure) sample       model structure of the multilayered coating system
 %   (scalar)    sol_length   the total length of the solution's vector as a sum
 %                            of all stress points that correspond to deffracting
 %                            layers
 %
-% Outputs:
+% Outputs
 %   (matrix)    A            coefficient matrix of the linear equations system
  
 % Authors

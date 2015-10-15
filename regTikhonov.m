@@ -8,7 +8,7 @@ function [y_alpha, b_alpha] = regTikhonov(A, b, alpha, disc_prin)
 %   regTikhonov solves the given linear equations system Ay = b using the
 %   Tikhonov's regularization approach.
 %
-% Inputs:
+% Inputs
 %   (matrix)    A          coefficient matrix of the linear equations system
 %   (matrix)    b          right-side matrix of the system (columns from left to
 %                          right: variable, function, standard deviation of the
@@ -17,7 +17,7 @@ function [y_alpha, b_alpha] = regTikhonov(A, b, alpha, disc_prin)
 %   (string)    disc_prin  discrepancy principle used to choose the
 %                          regularization parameter: 'pointwise' or 'uniform'
 %
-% Outputs:
+% Outputs
 %   (vector)    y_alpha    regularized solution
 %   (vector)    b_alpha    regularized pseudo-initial data
  

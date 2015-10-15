@@ -17,13 +17,13 @@ function [A, sample] = preProcessing(sample, sol_length)
 %     4) model residual stress in image space (sigma_tau) if such a model is not
 %        provided.
 %
-% Inputs:
+% Inputs
 %   (structure) sample      model structure of the multilayered coating system
 %   (scalar)    sol_length  the total length of the solution's vector as a sum
 %                           of all stress points that correspond to diffracting
 %                           layers
 %
-% Outputs:
+% Outputs
 %   (matrix)    A           coefficient matrix of the linear equations system
 %   (structure) sample      model structure of the multilayered coating system
  

@@ -11,13 +11,13 @@ function [sample] = postProcessing(sample, y, b, fname)
 %     2) [fname].dat  contains the initial and pseudo initial data - residual
 %                     stress in image space
 %
-% Inputs:
+% Inputs
 %   (structure) sample  model structure of the multilayered coating system
 %   (vector)    y       integral solution (stress in diffracting layers)
 %   (vector)    b       regularized pseudo-initial data
 %   (string)    fname   file name
 %
-% Outputs:
+% Outputs
 %   (structure) sample  model structure of the multilayered coating system with
 %                       the solution added
  

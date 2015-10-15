@@ -9,7 +9,7 @@ function calcStress(fname, conf)
 %   into real space using a regularization approach that is suitable both for
 %   solid materials and for thin films. 
 %
-% Inputs:
+% Inputs
 %   (string) fname                file name that contains initial data
 %   (string) [conf = 'config.m']  configuration file
  

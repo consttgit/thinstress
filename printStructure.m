@@ -8,7 +8,7 @@ function printStructure(sample)
 %   printStructure shows the order and the quantity of the absorbing and
 %   diffracting layers in the investigated multilayered system.
 %
-% Inputs:
+% Inputs
 %   (structure) sample  model structure of the multilayered coating system
  
 % Authors

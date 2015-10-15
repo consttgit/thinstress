@@ -8,7 +8,7 @@ function plotResults(sample)
 %   plotResults displays the residual stress in image space (initial data) and
 %   the residual stress-depth profile in real space (calculated results).
 %
-% Inputs:
+% Inputs
 %   (structure) SAMPLE  model structure of the multilayered coating system
  
 % Authors
