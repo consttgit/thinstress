@@ -15,7 +15,8 @@ cfg.disc_prin = 'pointwise';
 % Length of the solution's vector:
 cfg.sol_length = 250;
 
-% Regularization parameter, alpha_i = alpha_zero * factor^i, i = 0..length:
+% Regularization parameter:
+%   alpha_i = alpha_zero * alpha_mult^i, i = 0...alpha_length.
 cfg.alpha.zero   = 0.05;  % initial value > 0
 cfg.alpha.mult   = 0.9;   % 0 < multiplier < 1
 cfg.alpha.length = 150;   % length of the parameter's vector > 0
