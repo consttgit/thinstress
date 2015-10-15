@@ -59,10 +59,10 @@ alphas = alpha.zero * alpha.mult.^[0:alpha.length];
 
 fprintf('Define vector space of the regularized solutions..\n');
 
-% Hilbert finite dimensional vector space of the regularized solutions:
+% Vector space of the regularized solutions:
 sol_found = false;
 for i = 1:alpha.length
-    % Solve Euler equation of the II-nd order:
+    % Solve Euler equation of the second order:
     alphaI = alphas(i) * eye(n);
 
     % QR-factorization:
@@ -73,7 +73,7 @@ for i = 1:alpha.length
     % Regularized pseudo-initial data:
     b_alpha = A * y_alpha;
 
-    % Check if the obtained solution confirms the pointwise discrepancy
+    % Check if the obtained solution confirms the pointwise/uniform discrepancy
     % principle:
     discrepancy_uniform = norm(b_alpha - b(:, 2));
     
