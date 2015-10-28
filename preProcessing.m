@@ -43,7 +43,9 @@ for i = 1:length(sample.layer)
     end
 end
 
-% Grid step of the solution's depth:
+% Step of the solution grid. The grid step remains constant for diffracting
+% layers of different thicknesses. This means the length of the solution in a
+% particular diffracting layer depends on the corresponding layer thickness:
 h = sum_thickness / sol_length;
 
 % Summarized layers' thickness:
