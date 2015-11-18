@@ -31,11 +31,12 @@ Octave, ver. 3.8.1. Here is a small example on how it could be launched:
 ```
 $ octave
 >> cd 'thinstress/'
->> calcStress('models/sampleLayered.m')
+>> calcStress('yourSample.m')
 ...
 ```
-The file `sampleLayered.m` can be used as a template to define a structure of
-the multilayered system you investigate.  
+The file `sampleTemplate.m` can be used as a template to define a structure
+array `sample` in `yourSample.m` which describes a multilayered coating system
+you investigate.  
 
 ### License
 
