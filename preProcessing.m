@@ -82,15 +82,13 @@ for i = 1:length(sample.layer)
 end
 
 fprintf('Numerical approximation of the Fredholm integral equation..\n');
-% Coefficient matrix of the linear equations system:
-A = numFredholm(sample, sol_length);
+A = numFredholm(sample, sol_length);  % coefficient matrix
 
-% Generate the corresponding model of the residual stress in the image space
-% (initial data) using the stress model in real space (solution) if the initial
-% data is not given (NaN):
+% Generate the model of the residual stress in the image space (initial data)
+% using the defined stress model in real space (model solution) if the initial
+% data is not given (set to 'nan'):
 if all(isnan(sample.sigma_tau(:, 2)))
     fprintf('Model residual stress distribution in image space..\n', i);
-    % Model of the residual stress in real space:
     sigma_z = [];
     for i = 1:length(sample.layer)
         if sample.layer(i).diffracting
@@ -100,11 +98,11 @@ if all(isnan(sample.sigma_tau(:, 2)))
             sigma_z = [sigma_z; sample.layer(i).sigma_z(:, 2)];
         end
     end
-    % Model of the residual stress in image space that is equal to the
-    % direct solution of the initial inverse problem:
+    % Model of the residual stress in image space --- the direct solution of the
+    % initial inverse problem:
     sigma_tau = A * sigma_z;
-    % Apply a random perturbation that is normally distributed to the model
-    % obtained:
+    % Apply a random perturbation, which is normally distributed, to the
+    % obtained model:
     sample.sigma_tau(:, 2) = normrnd(sigma_tau, sample.sigma_tau(:, 3));
 end
 
