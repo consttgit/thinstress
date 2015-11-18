@@ -3,7 +3,7 @@ sample.layer(i).material = 'Al2O3';
 sample.layer(i).diffracting = true;
 sample.layer(i).thickness = 2.3;
 sample.layer(i).mue = 192.17;
-sample.layer(i).sigma_z_model = [-2000. -1200. 0.];
+sample.layer(i).sigma_z_model = [-6000. -3500. 0.];
 i = 2;
 sample.layer(i).material = 'TiCN';
 sample.layer(i).diffracting = false;
@@ -28,14 +28,14 @@ sample.layer(i).mue = 192.17;
 sample.layer(i).sigma_z_model = [150. 120. 100.];
 
 sample.sigma_tau = [
-    0.05  -1982  18
-    0.25  -1847  12
-    0.45  -1713  15
-    0.65  -1607  10
-    0.85  -1535  11
-    1.30  -1403  8
-    1.80  -1294  9
-    2.30  -1191  7
-    2.80  -1087  9
-    3.4   -985   6
+    0.05   -5880   85
+    0.25   -5577   92
+    0.45   -5098   58
+    0.65   -4836   30
+    0.85   -4500   22
+    1.30   -4165   23
+    1.80   -3835   22
+    2.30   -3555   25
+    2.80   -3293   20
+    3.4    -3036   18
 ];
