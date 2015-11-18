@@ -44,7 +44,7 @@ for i = 1:length(sample.layer)
 end
 
 % Save results:
-[dir, name] = fileparts(fname)
+[dir, name] = fileparts(fname);
 
 results = fullfile(dir, [name, '.res']);
 fprintf('Write results to: %s, ', results);
