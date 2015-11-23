@@ -88,7 +88,7 @@ A = numFredholm(sample, sol_length);  % coefficient matrix
 % using the defined stress model in real space (model solution) if the initial
 % data is not given (set to 'nan'):
 if all(isnan(sample.sigma_tau(:, 2)))
-    fprintf('Model residual stress distribution in image space..\n', i);
+    fprintf('Model residual stress in image space..\n', i);
     sigma_z = [];
     for i = 1:length(sample.layer)
         if sample.layer(i).diffracting

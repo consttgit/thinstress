@@ -45,29 +45,28 @@ b_alpha = zeros(m, 1);
 err = 4.0 * b(:, 3);
 err_norm = norm(err);
 
-fprintf('Define Euler equation of the 2nd order..\n');
+fprintf('Define the Tikhonov equation..\n');
 
 % Calculate a linear space of possible stable solutions of the ill-posed inverse
-% problem solving the Tikhonov's equation (Euler equation of the II-nd order):
-% (alpha*I + A^T*A)*y_alpha = A^T*b
+% problem solving the Tikhonov equation --> (alpha*I + A^T*A)*y_alpha = A^T*b:
 ATA = transpose(A) * A;
 ATb = transpose(A) * b(:, 2);
 
-% Define regularization parameters which will be used to calculate a space
-% of the approximative stable solutions:
+% Define regularization parameters which will be used to calculate a space of
+% the regularized solutions:
 alphas = alpha.zero * alpha.mult.^[0:alpha.length];
 
-fprintf('Define vector space of the regularized solutions..\n');
+fprintf('Define a vector space of the regularized solutions..\n');
 
-% Vector space of the regularized solutions:
 sol_found = false;
 for i = 1:alpha.length
-    % Solve Euler equation of the second order:
+    % Solve the Tikhonov equation:
     alphaI = alphas(i) * eye(n);
 
     % QR-factorization:
     [Q, R] = qr(alphaI + ATA);
-    % Solution of the integral equation:
+
+    % Regularized solution:
     y_alpha = R \ (transpose(Q) * ATb);
 
     % Regularized pseudo-initial data:
@@ -94,7 +93,7 @@ for i = 1:alpha.length
             alpha_i = i;
             break;
         else
-            error('Not appropriate configuration option: %s', disc_prin);
+            error('Configuration option: %s ??', disc_prin);
         end
     end
 end
