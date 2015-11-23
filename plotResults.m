@@ -76,14 +76,14 @@ hold on;
 D = 0.0;
 for i = 1:length(sample.layer)
     if sample.layer(i).diffracting
-        % Stress in real space:
-        plot(sample.layer(i).sigma_z(:, 1), ...
-             sample.layer(i).sigma_z(:, 3), ...
-             'r-', 'linewidth', 2);
-        % Stress model:
-        plot(sample.layer(i).sigma_z(:, 1), ...
-             sample.layer(i).sigma_z(:, 2), ...
-             'b-', 'linewidth', 2);
+        % Regularized solution:
+        p(1) = plot(sample.layer(i).sigma_z(:, 1), ...
+                    sample.layer(i).sigma_z(:, 3), ...
+                    'r-', 'linewidth', 2);
+        % Solution model:
+        p(2) = plot(sample.layer(i).sigma_z(:, 1), ...
+                    sample.layer(i).sigma_z(:, 2), ...
+                    'b-', 'linewidth', 2);
     end
     D = D + sample.layer(i).thickness;
 end
@@ -91,21 +91,22 @@ end
 % Show absorbing layers:
 D = 0.0;
 for i = 1:length(sample.layer)
-    if ~ sample.layer(i).diffracting
+    if ~sample.layer(i).diffracting
         ylim = get(gca, 'ylim');
         vertices = [D                             ylim(1);
                     D                             ylim(2);
                     D + sample.layer(i).thickness ylim(2);
                     D + sample.layer(i).thickness ylim(1)];
-        fill(vertices(:, 1), vertices(:, 2), 'c');
+        p(3) = fill(vertices(:, 1), vertices(:, 2), 'c');
     end
     D = D + sample.layer(i).thickness;
 end
 
-legend('Solution {\sigma}_{\alpha}(z)', ...
-       'Model of the solution {\sigma}(z)', ...
-       'Absorbing layers', ...
-       'location', 'SouthEast');
+names = {'Solution {\sigma}_{\alpha}(z)', ...
+         'Model of the solution {\sigma}(z)', ...
+         'Absorbing layers'};
+
+legend(p, names, 'location', 'SouthEast');
 hold off;
 
 end
