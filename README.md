@@ -1,28 +1,33 @@
 ## thinstress
 
-Solution to the ill-posed inverse problem of the residual stress depth
-profiling in thin films and compact solid materials.
+Residual stress depth profiling in thin films.
 
 ### What is it?
 
 The inverse problem, which arises in the case of space transformations of
-residual stress in image space measured by X-ray diffraction into residual
-stress in real space, is nontrivial and closely linked to significant
-difficulties obtaining stable solutions. Taking into account the scattering of
-the measurement data and the mathematical model describing these
-transformations, it is clear that the considered inverse problem is ill-posed
-and requires special methods in order to obtain the stable solution.
-Furthermore, a particularity of the transformation of residual stresses in
-multilayered coating systems is the requirement that the solution is localized
-in reflecting layers only. This requirement imposes strong restrictions on
-solution methods and does not allow one to use a conventional well known
-inverse Laplace transformation which results in a continuous function. The
-stable numerical solution of the described inverse problem can be found using
-the Tikhonov regularization. This approach can be used in case of compact solid
-materials as well as in case of thin films offering a possibility to determine
-residual stresses piecewise in diffracting layers only. In additon, this method
-allows one to find the *exact solution* of the considered inverse problem,
-if some conditions concerning the measurement data are satisfied.
+residual stress in *image space* measured by X-ray diffraction into residual
+stress in *real space*, is nontrivial and closely linked to significant
+difficulties obtaining a stable solution. Taking into account the scattering
+of the measurement results and the mathematical model, which describes the
+space transformations, it is clear that the considered inverse problem is
+ill-posed and requires special solution methods. Furthermore, a particularity
+of the transformation of the residual stresses in a multilayer systems is the
+requirement that the solution is localized in reflecting layers only. This
+requirement imposes strong restrictions on the solution methods and does not
+allow one to utilize methods based on the inverse Laplace transform, which is
+commonly used for the considered space transformations in compact solid
+materials. Besides, in the case of the solid materials the methods based on the
+inverse Laplace transform often lead to extremely unstable solutions. The
+stable numerical solution of the discussed inverse problem can be found using a
+method based on the Tikhonov regularization. This method can be applied both
+for solid materials and for thin films offering a possibility to determine
+stable approximative solutions in form of a piecewise function defined in
+diffracting layers only.  Hereby, the only requirement is that the error
+estimation of the measured initial data must be available. The advantage of the
+proposed method is the convergence of the obtained approximative solution to
+the unknown exact one with decreasing perturbation of the initial data. In
+addition, this method allows one to find the stable *exact solution* of the
+considered inverse problem if the initial data satisfy certain conditions.
 
 ### How to use it
 
