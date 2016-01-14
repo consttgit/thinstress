@@ -1,5 +1,4 @@
 ## Thinstress: Residual stress depth profiling in thin films.
--------------------------------------------------------------
 
 [![DOI](https://zenodo.org/badge/19969/consttgit/thinstress.svg)](https://zenodo.org/badge/latestdoi/19969/consttgit/thinstress)
 
@@ -29,7 +28,6 @@ addition, this method allows one to find the stable *exact solution* of the
 considered inverse problem if the initial data satisfy certain conditions.
 
 ### Usage
----------
 
 The program was tested using MATLAB, ver. 8.5.0.197613 (R2015a), and GNU
 Octave, ver. 3.8.1.  Here is a small example on how it could be launched:
@@ -44,7 +42,6 @@ array `sample` in `yourSample.m` which describes a multilayered coating system
 you investigate.  
 
 ### License
------------
 
 Copyright (c) 2015 Konstantin Tolstikhin
 
