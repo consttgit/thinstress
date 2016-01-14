@@ -1,8 +1,7 @@
-## thinstress
+## Thinstress: Residual stress depth profiling in thin films.
+-------------------------------------------------------------
 
-Residual stress depth profiling in thin films.
-
-### What is it?
+[![DOI](https://zenodo.org/badge/19969/consttgit/thinstress.svg)](https://zenodo.org/badge/latestdoi/19969/consttgit/thinstress)
 
 The inverse problem, which arises in the case of space transformations of
 residual stress in *image space* measured by X-ray diffraction into residual
@@ -29,10 +28,11 @@ the unknown exact one with decreasing perturbation of the initial data. In
 addition, this method allows one to find the stable *exact solution* of the
 considered inverse problem if the initial data satisfy certain conditions.
 
-### How to use it
+### Usage
+---------
 
 The program was tested using MATLAB, ver. 8.5.0.197613 (R2015a), and GNU
-Octave, ver. 3.8.1. Here is a small example on how it could be launched:
+Octave, ver. 3.8.1.  Here is a small example on how it could be launched:
 ```
 $ octave
 >> cd 'thinstress/'
@@ -44,6 +44,7 @@ array `sample` in `yourSample.m` which describes a multilayered coating system
 you investigate.  
 
 ### License
+-----------
 
 Copyright (c) 2015 Konstantin Tolstikhin
 
