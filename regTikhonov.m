@@ -29,14 +29,11 @@ function [y_alpha, b_alpha] = regTikhonov(A, b, alpha, disc_prin)
 %   copy of the MIT License along with this software. If not, see
 %   <http://opensource.org/licenses/MIT/>.
 
-% m - length of the initial data vector,
-% n - length of the soluton vector
 [m, n] = size(A);
 
 % Regularized solution:
 y_alpha = zeros(n, 1);
-% Regularized pseudo-initial data (projection of the regularized solution
-% onto the initial data space):
+% Regularized pseudo-initial data:
 b_alpha = zeros(m, 1);
 
 % Euclidean norm of the initial data error. Note that error range of the
@@ -47,23 +44,17 @@ err_norm = norm(err);
 
 fprintf('Define the Tikhonov equation..\n');
 
-% Calculate a linear space of possible stable solutions of the ill-posed inverse
-% problem solving the Tikhonov equation --> (alpha*I + A^T*A)*y_alpha = A^T*b:
 ATA = transpose(A) * A;
 ATb = transpose(A) * b(:, 2);
 
-% Define regularization parameters which will be used to calculate a space of
-% the regularized solutions:
 alphas = alpha.zero * alpha.mult.^[0:alpha.length];
 
 fprintf('Define a vector space of the regularized solutions..\n');
 
 sol_found = false;
 for i = 1:alpha.length
-    % Solve the Tikhonov equation:
     alphaI = alphas(i) * eye(n);
 
-    % QR-factorization:
     [Q, R] = qr(alphaI + ATA);
 
     % Regularized solution:
@@ -103,7 +94,7 @@ if ~sol_found
         fprintf('Using predefined parameter: ');
         alpha_i = 1;
     else
-        error('Regularization: No solution has been found.');
+        error('No solution has been found.');
     end
 end
 

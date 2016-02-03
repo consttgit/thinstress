@@ -34,7 +34,7 @@ for i = 1:length(sample.layer)
     end
 end
 
-% Coefficient matrix of the linear equations system:
+% Coefficient matrix of the SLE:
 A = [];
 
 for i = 1:size(sample.sigma_tau, 1)
