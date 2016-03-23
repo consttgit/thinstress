@@ -12,7 +12,7 @@
 %                    problem.
 % calcStress.m     - Calculate residual stresses in diffracting material.
 % sampleTemplate.m - Template of the 'sample' structure array which describes a
-%                    multilayer system (MLS).
+%                    multilayer system.
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>
