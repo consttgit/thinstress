@@ -13,7 +13,7 @@ $ octave
 >> calcStress('yourSample.m')
 ...
 ```
-The file `sampleTemplate.m` can be used as a template to define a structure array `sample` in `yourSample.m` which describes a multilayered coating system you investigate.  
+The file `sampleTemplate.m` can be used as a template to define a structure array `sample` in `yourSample.m` which describes a multilayer system you investigate.  
 
 ### License
 
