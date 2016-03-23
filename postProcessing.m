@@ -12,14 +12,14 @@ function [sample] = postProcessing(sample, y, b, fname)
 %                     stress in image space
 %
 % Inputs
-%   (structure) sample  model structure of the multilayered coating system
+%   (structure) sample  model structure of the multilayer system
 %   (vector)    y       integral solution (stress in diffracting layers)
 %   (vector)    b       regularized pseudo-initial data
 %   (string)    fname   file name
 %
 % Outputs
-%   (structure) sample  model structure of the multilayered coating system with
-%                       the solution added
+%   (structure) sample  model structure of the multilayer system with the
+%                       solution added
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>

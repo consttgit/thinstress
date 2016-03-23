@@ -9,13 +9,14 @@ function [A] = numFredholm(sample, sol_length)
 %   equation of the I-st kind using the rectangle method.
 %
 % Inputs
-%   (structure) sample       model structure of the multilayered coating system
+%   (structure) sample       model structure of the multilayer system
 %   (scalar)    sol_length   the total length of the solution's vector as a sum
-%                            of all stress points that correspond to deffracting
-%                            layers
+%                            of all stress points that correspond to the
+%                            deffracting layers
 %
 % Outputs
-%   (matrix)    A            coefficient matrix of the linear equations system
+%   (matrix)    A            coefficient matrix of the system of linear
+%                            equations
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>
@@ -25,7 +26,7 @@ function [A] = numFredholm(sample, sol_length)
 %   copy of the MIT License along with this software. If not, see
 %   <http://opensource.org/licenses/MIT/>.
 
-% Absorption coefficient of the diffracting layer:
+% Linear absorption coefficient of the diffracting layer:
 mue_d = nan;
 for i = 1:length(sample.layer)
     if sample.layer(i).diffracting
@@ -55,7 +56,7 @@ for i = 1:size(sample.sigma_tau, 1)
             % Add the real thickness of the layer:
             D = D + sample.layer(j).thickness;
         else
-            % Add the equivalent thickness of the layer:
+            % Add the 'equivalence' thickness of the layer:
             D = D + sample.layer(j).mue * sample.layer(j).thickness / mue_d;
         end
     end

@@ -1,4 +1,4 @@
-% Template of the 'sample' structure array which describes a multilayered
+% Template of the 'sample' structure array which describes a multilayer
 % coating system (MLS).
 
 % Authors

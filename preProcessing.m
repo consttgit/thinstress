@@ -18,14 +18,14 @@ function [A, sample] = preProcessing(sample, sol_length)
 %        provided.
 %
 % Inputs
-%   (structure) sample      model structure of the multilayered coating system
+%   (structure) sample      model structure of the multilayer system
 %   (scalar)    sol_length  the total length of the solution's vector as a sum
 %                           of all stress points that correspond to diffracting
 %                           layers
 %
 % Outputs
 %   (matrix)    A           coefficient matrix of the linear equations system
-%   (structure) sample      model structure of the multilayered coating system
+%   (structure) sample      model structure of the multilayer system
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>

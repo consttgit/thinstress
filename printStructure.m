@@ -1,15 +1,15 @@
 function printStructure(sample)
-% printStructure - Print layers' structure in the multilayered system.
+% printStructure - Print layers' structure of the multilayer system.
 %
 % Synapsis
 %   printStructure(sample)
 %
 % Description
 %   printStructure shows the order and the quantity of the absorbing and
-%   diffracting layers in the investigated multilayered system.
+%   diffracting layers in the investigated multilayer system.
 %
 % Inputs
-%   (structure) sample  model structure of the multilayered coating system
+%   (structure) sample  model structure of the multilayer system
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>
@@ -19,7 +19,7 @@ function printStructure(sample)
 %   copy of the MIT License along with this software. If not, see
 %   <http://opensource.org/licenses/MIT/>.
 
-fprintf('Structure of the multilayered system:\n');
+fprintf('Structure of the multilayer system:\n');
 fprintf('---- surface ----\n');
 for i = 1:length(sample.layer)
     fprintf('%d. %-8s (%-6.2f mue) ', i, ...

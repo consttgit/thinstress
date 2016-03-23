@@ -9,7 +9,7 @@ function plotResults(sample)
 %   the residual stress-depth profile in real space (calculated results).
 %
 % Inputs
-%   (structure) SAMPLE  model structure of the multilayered coating system
+%   (structure) sample  model structure of the multilayer system
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>
