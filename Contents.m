@@ -7,12 +7,12 @@
 % plotResults.m    - Plot calculated residual stress profiles.
 % postProcessing.m - Perfom a post-processing of the results.
 % preProcessing.m  - Perform a pre-processing of the initial data.
-% printStructure.m - Print layers' structure in the multilayered system.
+% printStructure.m - Print layers' structure in the multilayer system.
 % regTikhonov.m    - Find the regularized solution to the ill-posed inverse
 %                    problem.
 % calcStress.m     - Calculate residual stresses in diffracting material.
 % sampleTemplate.m - Template of the 'sample' structure array which describes a
-%                    multilayered coating system (MLS).
+%                    multilayer system (MLS).
  
 % Authors
 %   Konstantin Tolstikhin <k.tolstikhin(at)gmail.com>
